@@ -10,7 +10,6 @@ public class Logic
 	
 	public static void ConvertNumber(Integer num)
 	{
-		String NumberAsString=num.toString();
 		numLength=num.toString().length();
 		if (numLength>=4)
 		{
@@ -20,7 +19,9 @@ public class Logic
 		else
 			if (numLength==3)
 			{
-			
+			  int FirstDigit=num/100;
+			  int SecondDigit=(num%100)/10;
+			  int ThirdDigit=num%10;
 			}
 		
 	}

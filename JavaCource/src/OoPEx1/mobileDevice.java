@@ -7,9 +7,31 @@ public class mobileDevice
 	int OSVersion;
 	boolean hasFlash;
 	double price;
-	int screenWidth;
-	int screenHeight;
+	private int screenWidth;
+	public int getScreenWidth() {
+		return screenWidth;
+	}
 
+	public int getScreenHeight() {
+		return screenHeight;
+	}
+
+	private int screenHeight;
+
+	public void SetArea(int w, int h)
+	{
+		if (w<0 || w>10 || h<0 || h>20)
+		{
+			System.out.println("Width And/Or Height not in range");
+			System.exit(0);
+		}
+		else
+		{
+			screenWidth=w;
+			screenHeight=h;
+		}
+	}
+	
 	public void printParameters()
 	{
 		System.out.println("Phone Model is: "+ model);
@@ -20,7 +42,7 @@ public class mobileDevice
 	}
 	
 	//this function calculate the screen Area
-	int calculateArea(int Width, int Height)
+	public int calculateArea(int Width, int Height)
 	{
 		return Width*Height;
 	}
