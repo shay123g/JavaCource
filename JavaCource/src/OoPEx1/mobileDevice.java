@@ -8,6 +8,21 @@ public class mobileDevice
 	boolean hasFlash;
 	double price;
 	private int screenWidth;
+	private int screenHeight;
+
+	mobileDevice(int width, int height)
+	{
+		if (width<0 || width>10 || height<0 || height>20)
+		{
+			System.out.println("Width And/Or Height not in range");
+			System.exit(0);
+		}
+		else
+		{
+			this.screenWidth=width;
+			this.screenHeight=height;
+		}
+	}
 	public int getScreenWidth() {
 		return screenWidth;
 	}
@@ -16,21 +31,21 @@ public class mobileDevice
 		return screenHeight;
 	}
 
-	private int screenHeight;
 
-	public void SetArea(int w, int h)
-	{
-		if (w<0 || w>10 || h<0 || h>20)
-		{
-			System.out.println("Width And/Or Height not in range");
-			System.exit(0);
-		}
-		else
-		{
-			screenWidth=w;
-			screenHeight=h;
-		}
-	}
+
+//	public void SetArea(int w, int h)
+//	{
+//		if (w<0 || w>10 || h<0 || h>20)
+//		{
+//			System.out.println("Width And/Or Height not in range");
+//			System.exit(0);
+//		}
+//		else
+//		{
+//			screenWidth=w;
+//			screenHeight=h;
+//		}
+//	}
 	
 	public void printParameters()
 	{
