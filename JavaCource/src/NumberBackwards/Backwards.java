@@ -41,8 +41,8 @@ public class Backwards
                 tmpNum = tmpNum / 10;//tmpnum is the original number without the last digit
             }
             System.out.println("the Backward number is: ");
-            for (int i = 0; i < Backwardnumber.length; i++)
-                System.out.print(Backwardnumber[i]);
+            for (int value : Backwardnumber)
+                System.out.print(value);
         }
         else        /*input is decimal*/
         {
@@ -51,7 +51,7 @@ public class Backwards
             int dot = doubleNum.indexOf('.');  //dot=the position of the dot in the decimal number
             int i = 0;
             int j = dot + 1;
-            for (j = dot + 1; (i < dot) && (j < numLength); i++, j++)    //insert right part of the decimal (after the decimal "." to the left side of the array
+            for (; (i < dot) && (j < numLength); i++, j++)    //insert right part of the decimal (after the decimal "." to the left side of the array
                 Backwardnumber[i] = doubleNum.charAt(j);
             Backwardnumber[i] = doubleNum.charAt(dot); //insert the dot
             i++;
