@@ -23,11 +23,13 @@ public class mobileDevice
 			this.screenHeight=height;
 		}
 	}
-	public int getScreenWidth() {
+	public int getScreenWidth()
+	{
 		return screenWidth;
 	}
 
-	public int getScreenHeight() {
+	public int getScreenHeight()
+	{
 		return screenHeight;
 	}
 
