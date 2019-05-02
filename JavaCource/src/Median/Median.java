@@ -1,5 +1,4 @@
 package Median;
-
 /* input: Array of integers (int). array is already sorted from small to big
 *  output: array mediation*/
 public class Median
