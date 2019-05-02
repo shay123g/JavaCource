@@ -11,12 +11,12 @@ public class arrayClass
     {
         numbersArray=new ArrayList<Integer>();
     }
-    public void addToArray(Integer num)
+    public void addToArray(Integer num)   //insert the number got from the user to the array
     {
             if (num>0)
                 numbersArray.add(num);
     }
-    public void checkPrimeAndPrint()
+    public void checkPrimeAndPrint()   //iterate on each element in the array. if the number is prime, print it
     {
 
         for (Integer n : this.numbersArray)
