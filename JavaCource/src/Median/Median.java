@@ -3,12 +3,32 @@ package Median;
 *  output: array mediation*/
 public class Median
 {
-    static int medianIndex,arrayLength=-1;
-    static int Median(int sortarr[]) throws OddArrayException
+
+    int medianIndex,arrayLength;
+
+    Median(int numArr[], int len)
+    {
+        arrayLength=len;
+        if (numArr.length%2==0)
+            try
+            {
+                throw new OddArrayException("Array has even number of elements. program will now exit");
+            }
+            catch (OddArrayException e)
+            {
+                e.printStackTrace();
+            }
+        else {
+            int numbersArr[]=new int[arrayLength];
+            for (int i = 0; i < numArr.length; i++)
+                numbersArr[i] = numArr[i];
+            MedianCheck(numbersArr);
+        }
+        }
+
+    int MedianCheck(int sortarr[])
     {
         arrayLength=sortarr.length;
-        if (arrayLength%2==0)
-            throw new OddArrayException();
         medianIndex=arrayLength/2;
         return medianIndex;
     }

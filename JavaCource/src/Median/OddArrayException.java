@@ -2,8 +2,8 @@ package Median;
 
 public class OddArrayException extends Exception
 {
-    OddArrayException()
+    OddArrayException(String message)
     {
-        System.out.println("Array has even number of elements. program will now exit");
+        super(message);
     }
 }
