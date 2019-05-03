@@ -1,12 +1,11 @@
 package Median;
 /* input: Array of integers (int). array is already sorted from small to big
 *  output: array mediation*/
-public class Median
+class Median
 {
 
-    int medianIndex,arrayLength;
-
-    Median(int numArr[], int len)
+    private int arrayLength;
+    Median(int [] numArr, int len)
     {
         arrayLength=len;
         if (numArr.length%2==0)
@@ -19,17 +18,18 @@ public class Median
                 e.printStackTrace();
             }
         else {
-            int numbersArr[]=new int[arrayLength];
+            int [] numbersArr=new int[arrayLength];
             for (int i = 0; i < numArr.length; i++)
                 numbersArr[i] = numArr[i];
-            MedianCheck(numbersArr);
+            int medianIndex=MedianCheck(numbersArr);
+            System.out.println("The median is "+numbersArr[medianIndex]);
         }
         }
 
-    int MedianCheck(int sortarr[])
+    private int MedianCheck(int[] sortarr)
     {
         arrayLength=sortarr.length;
-        medianIndex=arrayLength/2;
-        return medianIndex;
+        return arrayLength/2;
+
     }
 }
