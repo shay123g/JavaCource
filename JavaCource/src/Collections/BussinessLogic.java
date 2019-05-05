@@ -8,17 +8,29 @@ import java.util.Scanner;
 public class BussinessLogic
 {
     public static List<String> Countries=new ArrayList<>();
-    public  static void InitializeCountryList()
+
+    public static void printCountries()
     {
-        Scanner inputStream=new Scanner(System.in);
-        System.out.println("Enter the countries you been visited, seperated by Enter. when you finish type Done");
-        String tmpstr = inputStream.nextLine();
+        for (String value : Countries)
+            System.out.println(value);
+    }
+    public  static void addToCountryList(Scanner scan)
+    {
+
+        String tmpstr = scan.nextLine();
         while (!tmpstr.equalsIgnoreCase("done"))
         {
             Countries.add(tmpstr);
-            tmpstr = inputStream.nextLine();
+            tmpstr = scan.nextLine();
         }
-
-             inputStream.close();
+    }
+    public  static void addFromMiddle(int index, Scanner scan)
+    {
+        String tmpstr = scan.nextLine();
+        while (!tmpstr.equalsIgnoreCase("done"))
+        {
+            Countries.add(index, tmpstr);
+            tmpstr = scan.nextLine();
+        }
     }
 }
